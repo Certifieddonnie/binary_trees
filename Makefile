@@ -1,4 +1,4 @@
-SHELL := /bin/env bash
+# SHELL := /bin/env bash
 CC := gcc
 FLAGS := -Wall -Wextra -Werror -pedantic
 
@@ -7,5 +7,5 @@ ${file}: ${file}.c
 	@echo ${file} compiled
 
 clean:
-	Deleting all binary files
+	@echo "Deleting all binary files"
 	@rm -rf *.o
