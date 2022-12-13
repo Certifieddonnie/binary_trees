@@ -9,14 +9,21 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
+	/*create pointer and allocate memory for the new node*/
 	binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
-	if (!new_node)
+
+	if (!new_node) /*check if mem alloc fails*/
 	{
-		return NULL;
+		return (NULL);
 	}
 
+	/*point new_node->parent to the given parent*/
 	new_node->parent = parent;
+	/*point new_node->value to the given value*/
 	new_node->n = value;
+	/*other attribs are NULL*/
+	new_node->right = NULL;
+	new_node->left = NULL;
 
-	return new_node;
+	return (new_node);
 }
