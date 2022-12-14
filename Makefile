@@ -5,8 +5,8 @@ NAME = binary_tree
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
-	$(CC) $(CLFAGS) $(OBJ) -o $(NAME)
+all: $(SRC)
+	$(CC) $(CLFAGS) $(SRC) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
