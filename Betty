@@ -1,5 +1,0 @@
-BE = betty
-SRC = *.c
-
-all: $(SRC)
-	$(BE) $(SRC)
