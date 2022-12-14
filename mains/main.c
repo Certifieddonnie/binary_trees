@@ -15,8 +15,14 @@ int main(void)
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
+<<<<<<< HEAD:main.c
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
+=======
+    root->right->left = binary_tree_node(root->right, 256);
+    root->right->right = binary_tree_node(root->right, 512);
+    /**/
+>>>>>>> refs/remotes/origin/main:mains/main.c
     binary_tree_print(root);
 
     nodes = binary_tree_nodes(root);

@@ -1,19 +1,11 @@
-CC = gcc
-SRC = *.c
-OBJ = $(SRC:.c=.o) 
-NAME = binary_tree
-RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
+# SHELL := /bin/env bash
+CC := gcc
+FLAGS := -Wall -Wextra -Werror -pedantic
 
-all: $(SRC)
-	$(CC) $(CLFAGS) $(SRC) -o $(NAME)
+${file}: ${file}.c
+	@${CC} ${FLAGS} binary_tree_print.c ${others} ${file}.c -o ${file}.o
+	@echo ${file} compiled
 
 clean:
-	$(RM) *~ $(NAME)
-
-oclean:
-	$(RM) $(OBJ)
-
-fclean: clean oclean
-
-re: fclean all
+	@echo "Deleting all binary files"
+	@rm -rf *.o
