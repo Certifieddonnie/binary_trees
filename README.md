@@ -30,4 +30,5 @@ Passing the files into the `others` argument as strings separated by spaces will
 make file=1-binary_tree_insert_left others="1-main.c 0-binary_tree_node.c"
 ```
 
+`make betty` to check and be sure all files are betty compliant.
 `make clean` to clear all compiled bin files
