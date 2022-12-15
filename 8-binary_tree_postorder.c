@@ -11,11 +11,13 @@
 */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
+	/*check if not null.*/
 	if (!tree || !func)
 	{
 		return;
 	}
 
+	/*Recursively call the func.*/
 	binary_tree_postorder(tree->left, func);
 	binary_tree_postorder(tree->right, func);
 	func(tree->n);

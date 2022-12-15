@@ -18,6 +18,8 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	{
 		return (1);
 	}
+
+	/*Recursively sums leaves on both sides.*/
 	leaves = binary_tree_leaves(tree->right) + binary_tree_leaves(tree->left);
 	return (leaves);
 }

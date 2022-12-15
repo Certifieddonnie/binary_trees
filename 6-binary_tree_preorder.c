@@ -10,13 +10,16 @@
 */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
+	/* Check if root and func is NULL*/
 	if (!tree || !func)
 	{
 		return;
 	}
-
+	/*Runs the Function*/
 	func(tree->n);
 
+	/*Navigates to the left handside of the root first.*/
 	binary_tree_preorder(tree->left, func);
+	/*Navgates back to the Right.*/
 	binary_tree_preorder(tree->right, func);
 }
