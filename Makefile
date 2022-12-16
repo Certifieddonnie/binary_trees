@@ -4,15 +4,16 @@ FLAGS := -Wall -Wextra -Werror -pedantic
 BE = betty
 SRC = *.c
 
-all: betty pile run clean
+all: betty ${file} run clean
 
 run: binary_trees.o
 	@./binary_trees.o
 	@echo ""
 	@sleep 2
-# ${file}: ${file}.c
-# 	@${CC} ${FLAGS} binary_tree_print.c ${SRC} ${file}.c -o ${file}.o
-# 	@echo ${file} compiled
+
+${file}: ${file}.c
+	@${CC} ${FLAGS} binary_tree_print.c ${SRC} ${file}.c -o ${file}.o
+	@echo ${file} compiled
 
 pile:
 	@${CC} ${FLAGS} ${SRC} -o binary_trees.o
