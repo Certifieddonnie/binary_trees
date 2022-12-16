@@ -23,12 +23,12 @@ int checker(const binary_tree_t *tree, size_t index, size_t nb_nodes)
 }
 
 /**
- * binary_tree_checker - checks if a binary tree is complete
+ * binary_tree_is_complete - checks if a binary tree is complete
  * @tree: pointer to the root node
  *
  * Return: 1 if the binary tree is complete, otherwise 0
  */
-int binary_tree_checker(const binary_tree_t *tree)
+int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	size_t nb_nodes;
 
